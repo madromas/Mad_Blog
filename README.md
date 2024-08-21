@@ -13,5 +13,6 @@ Activate plugins in Admin section.
 
 Screen shots:
 
-Coming soon
+![359672021-9b42af20-7a76-4953-82f5-bcfb7e03b48a](https://github.com/user-attachments/assets/67558a43-4390-4609-a9e8-052908deb017)
+
 

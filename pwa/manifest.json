@@ -1,0 +1,46 @@
+{
+	"short_name": "MadWay",
+	"name": "MadWay",
+	"description": "MadWay Community",
+	"lang": "en-EN",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"orientation": "any",
+	"theme_color": "rgb(30 36 43)",
+	"background_color": "#1e242b",
+	"icons": [
+		{
+			"src": "/pwa/img/512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/pwa/img/192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+      "src": "/pwa/img/144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/pwa/img/96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/pwa/img/72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/pwa/img/48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+
+
+	]
+}

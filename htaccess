@@ -1,0 +1,20 @@
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /
+
+# To redirect all users to access the site without the www. prefix
+     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+     RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
+
+    # HTTPS redirect if available
+     RewriteCond %{HTTPS} !=on
+     RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+RewriteRule . %1/%2 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.php?king-rewrite=$0&%{QUERY_STRING} [L]
+</IfModule>
+Options -Indexes

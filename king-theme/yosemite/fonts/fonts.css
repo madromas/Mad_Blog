@@ -1,0 +1,110 @@
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:200;
+	src:url("myriad-set-pro_thin.woff") format("woff"), url("myriad-set-pro_thin.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:italic;
+	font-weight:200;
+	src:url("myriad-set-pro_thin-italic.woff") format("woff"), url("myriad-set-pro_thin-italic.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:400;
+	src:url("myriad-set-pro_text.woff") format("woff"), url("myriad-set-pro_text.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:italic;
+	font-weight:400;
+	src:url("myriad-set-pro_text-italic.woff") format("woff"), url("myriad-set-pro_text-italic.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:500;
+	src:url("myriad-set-pro_medium.woff") format("woff"), url("myriad-set-pro_medium.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:italic;
+	font-weight:500;
+	src:url("myriad-set-pro_medium-italic.woff") format("woff"), url("myriad-set-pro_medium-italic.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:700;
+	src:url("myriad-set-pro_bold.woff") format("woff"), url("myriad-set-pro_bold.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:italic;
+	font-weight:700;
+	src:url("myriad-set-pro_bold-italic.woff") format("woff"), url("myriad-set-pro_bold-italic.ttf") format("truetype");
+	*src:url('');
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+/* IE8 and Below
+----------------- */
+@font-face {
+	*font-family:'Myriad Set Pro 100';
+	*src:url("myriad-set-pro_ultralight.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	*font-family:'Myriad Set Pro 200';
+	*src:url("myriad-set-pro_thin.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	*font-family:'Myriad Set Pro';
+	*src:url("myriad-set-pro_text.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	*font-family:'Myriad Set Pro 500';
+	*src:url("myriad-set-pro_medium.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	*font-family:'Myriad Set Pro 600';
+	*src:url("myriad-set-pro_semibold.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+
+@font-face {
+	*font-family:'Myriad Set Pro 700';
+	*src:url("myriad-set-pro_bold.eot?") format("eot");
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+

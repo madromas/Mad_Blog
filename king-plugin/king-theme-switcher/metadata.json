@@ -1,0 +1,11 @@
+{
+	"name": "Theme Switcher",
+	"description": "Allows users to change site theme",
+	"version": "1.0",
+	"date": "2019",
+	"author": "King MEDIA",
+	"author_uri": "https://www.kingthemes.net",
+	"license": "GPLv2",
+	"min_q2a": "1",
+	"load_order": "after_db_init"
+}

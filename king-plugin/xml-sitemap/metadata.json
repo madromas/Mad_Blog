@@ -1,0 +1,11 @@
+{
+	"name": "XML Sitemap",
+	"description": "Generates sitemap.xml file for submission to search engines",
+	"version": "1.0",
+	"date": "2019",
+	"author": "King MEDIA",
+	"author_uri": "https://www.kingthemes.net",
+	"license": "GPLv2",
+	"min_q2a": "1",
+	"load_order": "after_db_init"
+}

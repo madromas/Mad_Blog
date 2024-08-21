@@ -97,7 +97,7 @@
 		'links_in_new_window' => 'Allow Video Upload :',
 		'logo_height' => 'Logo height:',
 		'logo_show' => 'Show a logo image in the page header',
-		'logo_url' => '',
+		'logo_url' => 'logo.png',
 		'logo_width' => 'Logo width:',
 		'mailing_body' => 'Body text:',
 		'mailing_enabled' => 'Enable mass mailings to all users',

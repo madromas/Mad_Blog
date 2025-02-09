@@ -580,28 +580,29 @@
 	 * displaying/logging (as appropriate) the original source filename, if an error occurred when evaluating the code.
 	 */
 	function qa_eval_from_file($eval, $filename)
-	{
-		// could also use ini_set('error_append_string') but apparently it doesn't work for errors logged on disk
+{
+	// could also use ini_set('error_append_string') but apparently it doesn't work for errors logged on disk
 
-		global $php_errormsg;
+	global $php_errormsg;
 
-		$oldtrackerrors=@ini_set('track_errors', 1);
-		$php_errormsg=null;
+	$oldtrackerrors=@ini_set('track_errors', 1);
+	$php_errormsg=null;
 
-		eval('?'.'>'.$eval);
+	eval('?'.'>'.$eval);
 
-		if (strlen($php_errormsg)) {
-			switch (strtolower(@ini_get('display_errors'))) {
-				case 'on': case '1': case 'yes': case 'true': case 'stdout': case 'stderr':
-					echo ' of '.qa_html($filename)."\n";
-					break;
-			}
+	if ($php_errormsg !== null && strlen($php_errormsg)) {  // Check if $php_errormsg is not null
 
-			@error_log('PHP King-Media more info: '.$php_errormsg." in eval()'d code from ".qa_html($filename));
+		switch (strtolower(@ini_get('display_errors'))) {
+			case 'on': case '1': case 'yes': case 'true': case 'stdout': case 'stderr':
+				echo ' of '.qa_html($filename)."\n";
+				break;
 		}
 
-		@ini_set('track_errors', $oldtrackerrors);
+		@error_log('PHP King-Media more info: '.$php_errormsg." in eval()'d code from ".qa_html($filename));
 	}
+
+	@ini_set('track_errors', $oldtrackerrors);
+}
 
 
 	/**
@@ -970,7 +971,7 @@
 	{
 		if (qa_to_override(__FUNCTION__)) { $args=func_get_args(); return qa_call_override(__FUNCTION__, $args); }
 
-		return get_magic_quotes_gpc() ? stripslashes($string) : $string;
+		return $string;
 	}
 
 
@@ -981,7 +982,7 @@
 	{
 		if (qa_to_override(__FUNCTION__)) { $args=func_get_args(); return qa_call_override(__FUNCTION__, $args); }
 
-		return get_magic_quotes_gpc() ? addslashes($string) : $string;
+		return $string;
 	}
 
 

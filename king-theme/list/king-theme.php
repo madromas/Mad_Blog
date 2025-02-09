@@ -142,7 +142,7 @@ function hasScrolled() {
 
 	function body()
 	{
-		$actual_link = (isset($_SERVER['HTTPS']) ? "https://" : "https://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'';
+		$actual_link = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'';
 		$this->output('<BODY');			
 		$this->body_tags();
 		$this->output('>');
@@ -771,7 +771,7 @@ $this->output('<li class="theme-button"><a href="https://madway.net/madway.apk" 
 
 	function multipleupload()
 	{
-		$mpageurl = (isset($_SERVER['HTTPS']) ? "https://" : "https://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'/';
+		$mpageurl = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'/';
 		$maxcount = qa_opt('image_max_file_count');
 		$maxsize = qa_opt('image_max_upload');
 		define( 'MB', 1048576 );
@@ -820,7 +820,7 @@ $this->output('<li class="theme-button"><a href="https://madway.net/madway.apk" 
 
 	function videoupload()
 	{
-		$mpageurl = (isset($_SERVER['HTTPS']) ? "https://" : "https://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'/';
+		$mpageurl = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . ''.@$_SERVER['HTTP_HOST'].strtr(dirname($_SERVER['SCRIPT_NAME']), '\\', '/').'/';
 		$maxvideosize = qa_opt('video_max_upload');
 		define( 'MB', 1048576 );	
 		$this->output('<script>
@@ -1217,7 +1217,7 @@ $this->output(
 				'metacafe'=>array(
 					array(
 						'https{0,1}:\/\/w{0,3}\.*metacafe\.com\/watch\/([0-9]+)\/([a-z0-9_]+)[^< ]*',
-						'<embed flashVars="playerVars=showStats=no|autoPlay=no" src="https://www.metacafe.com/fplayer/$1/$2.swf" width="'.$w.'" height="'.$h.'" wmode="transparent" allowFullScreen="true" allowScriptAccess="always" name="Metacafe_$1" pluginspage="https://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>'
+						'<embed flashVars="playerVars=showStats=no|autoPlay=no" src="https://www.metacafe.com/fplayer/$1/$2.swf" width="'.$w.'" height="'.$h.'" wmode="transparent" allowFullScreen="true" allowScriptAccess="always" name="Metacafe_$1" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>'
 					)
 				),
 				'vine'=>array(
@@ -1286,14 +1286,14 @@ $this->output(
 				'xhamster'=>array(
 					array(
 						'https{0,1}:\/\/w{0,3}\.*xhamster\.com\/movies\/([0-9]+)\/(.*?)[^< ]*',
-						'<iframe src="https://xhamster.com/xembed.php?video=$1" width="'.$w.'" height="'.$h.'" scrolling="no" allowfullscreen></iframe>'
+						'<iframe src="http://xhamster.com/xembed.php?video=$1" width="'.$w.'" height="'.$h.'" scrolling="no" allowfullscreen></iframe>'
 					)
 				),
 
 				'okru'=>array(
 					array(
 						'https{0,1}:\/\/w{0,3}\.*ok\.ru\/video\/([A-Za-z0-9]+)[^< ]*',
-						'<iframe width="'.$w.'" height="'.$h.'" src="https://ok.ru/videoembed/$1" frameborder="0" allowfullscreen></iframe>'
+						'<iframe width="'.$w.'" height="'.$h.'" src="http://ok.ru/videoembed/$1" frameborder="0" allowfullscreen></iframe>'
 					)
 				),
 
@@ -1462,7 +1462,7 @@ function socialshare()
 	$this->output('<a class="share-badge facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u='.$shareurl.'" target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, \'_blank\', \'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600\');return false;">');
 	$this->output('<i class="fab fa-facebook fa-lg"></i>');
 	$this->output('</a>');			
-	$this->output('<a class="share-badge twitter" href="https://twitter.com/share?text='.$headtitle.'&amp;url='.$shareurl.'" title="Share on Twitter" rel="nofollow" target="_blank" onclick="avascript:window.open(this.href, \'_blank\', \'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600\');return false;"><i class="fab fa-twitter-square"></i></a>');
+	$this->output('<a class="share-badge twitter" href="http://twitter.com/share?text='.$headtitle.'&amp;url='.$shareurl.'" title="Share on Twitter" rel="nofollow" target="_blank" onclick="avascript:window.open(this.href, \'_blank\', \'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600\');return false;"><i class="fab fa-twitter-square"></i></a>');
 	if (strlen(@$this->content['description'])) {
 		$this->output('<a class="share-badge pinshare" href="//www.pinterest.com/pin/create/button/?url='.$shareurl.'&amp;media='.$this->content['description'].'&amp;description=" title="Pin It" target="_blank" onclick="javascript:window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600\');return false;"><i class="fab fa-pinterest-square"></i></a>');
 	}
@@ -1836,7 +1836,7 @@ function a_item_main($a_item)
 						'<a href="'.$navlink['url'].'" class="king-'.$class.'-link'.
 						(@$navlink['selected'] ? (' king-'.$class.'-selected') : '').
 						(@$navlink['favorited'] ? (' king-'.$class.'-favorited') : '').
-						'"'.(strlen(@$navlink['popup']) ? (' title="'.$navlink['popup'].'"') : '').
+						'"' . (isset($navlink['popup']) && $navlink['popup'] !== null && strlen($navlink['popup']) ? (' title="' . htmlspecialchars($navlink['popup'], ENT_QUOTES, 'UTF-8') . '"') : '') .
 						(isset($navlink['target']) ? (' target="'.$navlink['target'].'"') : '').'>'.$navlink['label'].
 						'</a>'
 					);
@@ -1849,9 +1849,10 @@ function a_item_main($a_item)
 						'>'.$navlink['label'].'</span>'
 					);
 				
-				if (strlen(@$navlink['note']))
-					$this->output('<span class="king-'.$class.'-note">'.$navlink['note'].'</span>');
+				if (isset($navlink['note']) && $navlink['note'] !== null && strlen($navlink['note'])) {
+    $this->output('<span class="king-' . $class . '-note">' . htmlspecialchars($navlink['note'], ENT_QUOTES, 'UTF-8') . '</span>');
 			}
+		}
 
 			function attribution()
 			{
